@@ -4,3 +4,5 @@ const validErrorsRu = {
     stringValid: '',
     linkNotLink: 'Здесь должна быть ссылка'
 }
+
+export default validErrorsRu

@@ -1,4 +1,4 @@
-class PicPopup {
+export default class PicPopup {
     constructor(image, alt) {
         this.popup = null;
         this.image = image;
