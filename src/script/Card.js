@@ -1,4 +1,6 @@
-class Card {
+import PicPopup from './PicPopup';
+
+export default class Card {
     constructor(title, picSource) {
         this.card = this.template(title, picSource);
         this.delete = this.delete.bind(this);

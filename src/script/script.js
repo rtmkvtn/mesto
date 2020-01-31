@@ -1,3 +1,14 @@
+import '../pages/index.css'
+import Api from './Api';
+import Card from './Card';
+import CardList from './CardList';
+import FormPopup from './FormPopup';
+import PicPopup from './PicPopup';
+import Validator from './Validator';
+import validErrors from './validErrors';
+
+export { cards, root, userName, userJob, userAvatar, userInfoName, userInfoJob, cardList, options, api};
+
 const cards = document.querySelector('.places-list');
 const root = document.querySelector('.root');
 const userName = document.querySelector('.user-info__name');

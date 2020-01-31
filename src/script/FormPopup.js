@@ -1,4 +1,7 @@
-class FormPopup {
+import Validator from './Validator';
+import {api, userName, userJob} from './script';
+
+export default class FormPopup {
     constructor(image, alt) {
         this.popup = null;
         this.close = this.close.bind(this);
@@ -9,7 +12,7 @@ class FormPopup {
             const templatePopup = `
                 <div class="popup popup_add popup_is-opened">
                     <div class="popup__content">
-                        <img src="./images/close.svg" alt="" class="popup__close">
+                        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
                         <h3 class="popup__title">Новое место</h3>
                         <form class="popup__form" name="form">
                             <input type="text" name="input__one" class="popup__input popup__input_type_name" placeholder="Название" required minlength="2" maxlength="30">

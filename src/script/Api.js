@@ -1,4 +1,6 @@
-class Api {
+import { userName, userJob, cardList, userAvatar} from './script'
+
+export default class Api {
     constructor(options) {
         this.baseUrl = options.baseUrl;
         this.token = options.token;

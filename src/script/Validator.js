@@ -1,4 +1,6 @@
-class Validator {
+import validErrorsRu from './validErrors';
+
+export default class Validator {
     //getting right error-message element for check
     getErrorElement() {
         const errorrString = document.querySelectorAll('.popup__error');
