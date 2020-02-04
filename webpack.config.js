@@ -31,17 +31,40 @@ module.exports = {
             'postcss-loader'
         ]
        },
-       {
-        test: /\.(png|jpg|gif|ico|svg)$/i,
+
+      {
+        test: /\.(png|jpg|gif|ico|svg)$/,
         use: [
-            'file-loader? name=../images/[name].[ext]',
           {
-            loader: 'image-webpack-loader',
+            loader: "file-loader?name=./images/[name].[ext]",
             options: {
+              esModule: false
             }
           },
-        ],
-        },
+          {
+            loader: "image-webpack-loader",
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65
+              },
+              optipng: {
+                enabled: false
+              },
+              pngquant: {
+                quality: [0.65, 0.9],
+                speed: 4
+              },
+              gifsicle: {
+                interlaced: false
+              },
+              webp: {
+                quality: 75
+              }
+            }
+          }
+        ]
+      },
         {
             test: /\.(eot|ttf|woff|woff2)$/,
             loader: 'file-loader?name=./vendor/[name].[ext]'
