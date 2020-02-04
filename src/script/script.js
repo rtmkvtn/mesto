@@ -18,7 +18,7 @@ const userInfoName = document.querySelector('.user-info__name');
 const userInfoJob = document.querySelector('.user-info__job');
 const cardList = new CardList(cards);
 const options = {
-      baseUrl: 'http://95.216.175.5/cohort5',
+      baseUrl: 'https://95.216.175.5/cohort5',
       token: '986ab668-9bd3-4a24-aab1-bd07b4c0a5f9',
       groupId: 'cohort5'
 };
