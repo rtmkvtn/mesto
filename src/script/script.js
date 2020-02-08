@@ -7,6 +7,14 @@ import PicPopup from './PicPopup';
 import Validator from './Validator';
 import validErrors from './validErrors';
 
+var font = new FontFace('Inter', "url(./vendor/Inter-Regular.woff2)", {
+      weight: '400'
+});
+font.load().then(function (loadedFace) {
+      document.fonts.add(loadedFace);
+      document.body.style.fontFamily = "Inter, serif";
+});
+
 export { cards, root, userName, userJob, userAvatar, userInfoName, userInfoJob, cardList, options, api};
 
 const cards = document.querySelector('.places-list');
@@ -18,7 +26,7 @@ const userInfoName = document.querySelector('.user-info__name');
 const userInfoJob = document.querySelector('.user-info__job');
 const cardList = new CardList(cards);
 const options = {
-      baseUrl: 'https://praktikum.tk/cohort5',
+      baseUrl: FETCH_URL,
       token: '986ab668-9bd3-4a24-aab1-bd07b4c0a5f9',
       groupId: 'cohort5'
 };
