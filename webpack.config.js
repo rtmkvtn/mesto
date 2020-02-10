@@ -84,9 +84,9 @@ module.exports = {
         canPrint: true
     }),
     new HtmlWebpackPlugin({
-      inject: false,
-      template: './src/index.html',
-      filename: 'index.html'
+        inject: false,
+        template: './src/index.html',
+        filename: 'index.html'
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
