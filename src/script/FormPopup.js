@@ -12,7 +12,7 @@ export default class FormPopup {
             const templatePopup = `
                 <div class="popup popup_add popup_is-opened">
                     <div class="popup__content">
-                        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+                        <div class="popup__close"></div>
                         <h3 class="popup__title">Новое место</h3>
                         <form class="popup__form" name="form">
                             <input type="text" name="input__one" class="popup__input popup__input_type_name" placeholder="Название" required minlength="2" maxlength="30">
@@ -30,15 +30,15 @@ export default class FormPopup {
             const templatePopup = `
                 <div class="popup popup-edit popup_is-opened">
                     <div class="popup__content">
-                        <img src="./images/close.svg" alt="" class="popup__close">
+                        <div class="popup__close"></div>
                         <h3 class="popup__title">Редактировать профиль</h3>
-                        <form class="popup__form" name="form">
-                            <input type="text" name="input__one" class="popup__input popup__input_type_userName" placeholder="Имя" required minlength="2" maxlength="30" value="${userName.textContent}">
-                            <p class="popup__error"></p>
-                            <input type="text" name="input__two" class="popup__input popup__input_type_job" placeholder="О себе" required minlength="2" maxlength="30" value="${userJob.textContent}">
-                            <p class="popup__error"></p>
-                            <button class="button popup__button popup__button-edit button_active">Сохранить</button>
-                        </form>
+                            <form class="popup__form" name="form">
+                                <input type="text" name="input__one" class="popup__input popup__input_type_userName" placeholder="Имя" required minlength="2" maxlength="30" value="${userName.textContent}">
+                                <p class="popup__error"></p>
+                                <input type="text" name="input__two" class="popup__input popup__input_type_job" placeholder="О себе" required minlength="2" maxlength="30" value="${userJob.textContent}">
+                                <p class="popup__error"></p>
+                                <button class="button popup__button popup__button-edit button_active">Сохранить</button>
+                            </form>
                     </div>
                 </div>`
             let element = document.createElement('div');
